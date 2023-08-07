@@ -10,19 +10,19 @@ import NavBar from '@/Layouts/NavBar.vue';
     <NavBar />
 
     <!-- Header -->
-    <header id="header" class="header py-28 text-center md:pt-36 lg:text-left xl:pt-44 xl:pb-32">
+    <header id="header" class="text-center header py-28 md:pt-36 lg:text-left xl:pt-44 xl:pb-32">
         <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
             <div class="mb-16 lg:mt-22 xl:mt-30 xl:mr-12">
-                <h1 class="h1-large mb-5">
+                <h1 class="mb-5 h1-large">
                     Partenaire privilégié des entreprises et des particuliers</h1>
-                <p class="p-large mb-8">
+                <p class="mb-8 p-large">
                     Créé pour répondre aux besoins des entreprises en RDC, Saphir Consulting Groupe SARL demeure un
                     partenaire stratégique qui travaille d’arrache-pied pour assurer la croissance des activités économiques
                     en faisant la promotion de l’entrepreneuriat en RDC.
 
                 </p>
-                <a class="btn-solid-lg" href="#your-link"><i class="fab fa-apple"></i>Contactez-nous</a>
-                <a class="btn-solid-lg secondary" href="#your-link"><i class="fab fa-google-play"></i>Download</a>
+                <a class="btn-solid-lg" href="#your-link">Contactez-nous</a>
+                <!-- <a class="btn-solid-lg secondary" href="#your-link"><i class="fab fa-google-play"></i>Download</a> -->
             </div>
             <div class="xl:text-right">
                 <img class="inline" src="images/pngegg-2.png" alt="alternative" />
@@ -35,7 +35,7 @@ import NavBar from '@/Layouts/NavBar.vue';
     <!-- Introduction -->
     <div class="pt-4 pb-2 text-center">
         <div class="container px-4 sm:px-8 xl:px-4">
-            <p class="mb-4 text-gray-800 text-3xl leading-10 lg:max-w-5xl lg:mx-auto">
+            <p class="mb-4 text-3xl leading-10 text-gray-800 lg:max-w-5xl lg:mx-auto">
                 NOS SERVICES
             </p>
         </div> <!-- end of container -->
@@ -44,7 +44,7 @@ import NavBar from '@/Layouts/NavBar.vue';
 
 
     <!-- Features -->
-    <div id="features" class="cards-1">
+    <div id="services" class="cards-1">
         <div class="container px-4 sm:px-8 xl:px-4">
 
             <!-- Card -->
@@ -93,7 +93,7 @@ import NavBar from '@/Layouts/NavBar.vue';
             <!-- end of card -->
 
             <!-- Card -->
-            <div class="card mx-5">
+            <div class="mx-5 card">
                 <div class="card-image">
                     <img src="images/features-icon-5.svg" alt="alternative" />
                 </div>
@@ -134,32 +134,47 @@ import NavBar from '@/Layouts/NavBar.vue';
         </div> <!-- end of container -->
     </div> <!-- end of cards-1 -->
     <!-- end of features -->
-<!-- Introduction -->
-<div class="pt-4 pb-14 text-center">
-    <div class="container px-4 sm:px-8 xl:px-4">
-        <p class="mb-4 text-gray-800 text-3xl leading-10 lg:max-w-5xl lg:mx-auto">
-            NOS RÉALISATIONS
-        </p>
-    </div> <!-- end of container -->
-</div>
-<!-- end of introduction -->
+    <!-- Introduction -->
+    <div class="pt-4 text-center pb-14">
+        <div class="container px-4 sm:px-8 xl:px-4">
+            <p class="mb-4 text-3xl leading-10 text-gray-800 lg:max-w-5xl lg:mx-auto">
+                NOS RÉALISATIONS
+            </p>
+        </div> <!-- end of container -->
+    </div>
+    <!-- end of introduction -->
 
 
     <!-- Details 1 -->
-    <div id="details" class="pt-12 pb-16 lg:pt-16">
+    <div id="realisation" class="pt-12 pb-16 lg:pt-16">
         <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
             <div class="lg:col-span-5">
                 <div class="mb-16 lg:mb-0 xl:mt-16">
-                    <h2 class="mb-6">Results driven ground breaking technology</h2>
-                    <p class="mb-4">Based on our team's extensive experience in developing line of business applications and
-                        constructive customer feedback we reached a new level of revenue.</p>
-                    <p class="mb-4">We enjoy helping small and medium sized tech businesses take a shot at established
-                        Fortune 500 companies</p>
+                    <h1 class="mb-6 text-xl"> Saphir Compta </h1>
+                    <p class="mb-4">
+                        Saphir-compta est un logiciel de comptabilité qui permet de gérer les finances d'une
+                        entreprise de manière électronique.</p>
+                    <ul class="space-y-2 list mb-7">
+                        <li class="flex">
+                            <i class="fas fa-chevron-right"></i>
+                            <div>Saisir les écritures comptables</div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-chevron-right"></i>
+                            <div>Générer des états financiers</div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-chevron-right"></i>
+                            <div>Gérer les contacts clients et fournisseurs</div>
+                        </li>
+                    </ul>
+
+                    <a class="btn-solid-reg popup-with-move-anim mr-1.5" href="#details-lightbox">Nous contactez</a>
                 </div>
             </div> <!-- end of col -->
             <div class="lg:col-span-7">
                 <div class="xl:ml-14">
-                    <img class="inline" src="images/details-1.jpg" alt="alternative" />
+                    <img class="inline rounded-xl" src="images/compta.jpeg" alt="alternative" />
                 </div>
             </div> <!-- end of col -->
         </div> <!-- end of container -->
@@ -172,28 +187,30 @@ import NavBar from '@/Layouts/NavBar.vue';
         <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
             <div class="lg:col-span-7">
                 <div class="mb-12 lg:mb-0 xl:mr-14">
-                    <img class="inline" src="images/details-2.jpg" alt="alternative" />
+                    <img class="inline rounded-xl" src="images/gestion.png" alt="alternative" />
                 </div>
             </div> <!-- end of col -->
             <div class="lg:col-span-5">
                 <div class="xl:mt-12">
-                    <h2 class="mb-6">Instant results for the marketing department</h2>
-                    <ul class="list mb-7 space-y-2">
+                    <h1 class="mb-6 text-xl"> Gestion de stock et Mini comptabilé </h1>
+                    <p class="mb-4">Une application de gestion de stock peut vous aider à suivre vos niveaux de stock, à
+                        gérer vos commandes et à éviter les ruptures de stock. </p>
+                    <ul class="space-y-2 list mb-7">
                         <li class="flex">
                             <i class="fas fa-chevron-right"></i>
-                            <div>Features that will help you and your marketers</div>
+                            <div>Gestion de stock</div>
                         </li>
                         <li class="flex">
                             <i class="fas fa-chevron-right"></i>
-                            <div>Smooth learning curve due to the knowledge base</div>
+                            <div>Gestion des clients et fournisseurs</div>
                         </li>
                         <li class="flex">
                             <i class="fas fa-chevron-right"></i>
-                            <div>Ready out-of-the-box with minor setup settings</div>
+                            <div>Mini comptabilité </div>
                         </li>
                     </ul>
-                    <a class="btn-solid-reg popup-with-move-anim mr-1.5" href="#details-lightbox">Lightbox</a>
-                    <a class="btn-outline-reg" href="article.html">Details</a>
+                    <a class="btn-solid-reg popup-with-move-anim mr-1.5" href="#details-lightbox">Nous contactez</a>
+                    <!-- <a class="btn-outline-reg" href="article.html">Details</a> -->
                 </div>
             </div> <!-- end of col -->
         </div> <!-- end of container -->
@@ -201,244 +218,144 @@ import NavBar from '@/Layouts/NavBar.vue';
     <!-- end of details 2 -->
 
 
-    <!-- Details Lightbox -->
-    <!-- Lightbox -->
-    <div id="details-lightbox" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="lg:grid lg:grid-cols-12 lg:gap-x-8">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="lg:col-span-8">
-                <div class="mb-12 text-center lg:mb-0 lg:text-left xl:mr-6">
-                    <img class="inline rounded-lg" src="images/details-lightbox.jpg" alt="alternative" />
+
+    <section class="p-4 lg:p-8 dark:text-white">
+        <div class="container mx-auto space-y-12">
+            <div class="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
+                <img src="images/cm.jpg" alt="" class="h-80 dark:bg-gray-100 aspect-video">
+                <div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+
+                    <h3 class="text-3xl font-bold text-white"> MISSION COMPTABLE </h3>
+                    <p class="my-2 dark:text-gray-400">
+                        Nous réalisons votre mission comptable, fiscale, juridique et sociale avec un expert-comptable
+                        confirmé
+                    </p>
+                    <h3 class="text-3xl font-bold text-white"> OPTIMISATION FISCALE </h3>
+                    <p class="my-2 dark:text-gray-400">
+                        Nous vous apportons les optimisations fiscales adaptées à votre activité ainsi qu’à votre situation
+                        personnelle
+                    </p>
+
                 </div>
-            </div> <!-- end of col -->
-            <div class="lg:col-span-4">
-                <h3 class="mb-2">Goals Setting</h3>
-                <hr class="w-11 h-0.5 mt-0.5 mb-4 ml-0 border-none bg-indigo-600" />
-                <p>The app can easily help you track your personal development evolution if you take the time to set it up.
-                </p>
-                <h4 class="mt-7 mb-2.5">User Feedback</h4>
-                <p class="mb-4">This is a great app which can help you save time and make your live easier. And it will help
-                    improve your productivity.</p>
-                <ul class="list mb-6 space-y-2">
-                    <li class="flex">
-                        <i class="fas fa-chevron-right"></i>
-                        <div>Splash screen panel</div>
-                    </li>
-                    <li class="flex">
-                        <i class="fas fa-chevron-right"></i>
-                        <div>Statistics graph report</div>
-                    </li>
-                    <li class="flex">
-                        <i class="fas fa-chevron-right"></i>
-                        <div>Events calendar layout</div>
-                    </li>
-                    <li class="flex">
-                        <i class="fas fa-chevron-right"></i>
-                        <div>Location details screen</div>
-                    </li>
-                    <li class="flex">
-                        <i class="fas fa-chevron-right"></i>
-                        <div>Onboarding steps interface</div>
-                    </li>
-                </ul>
-                <a class="btn-solid-reg mfp-close page-scroll" href="#download">Download</a>
-                <button class="btn-outline-reg mfp-close as-button" type="button">Back</button>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- end of details lightbox -->
+            </div>
+            <div class="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
+                <img src="images/entreprise.jpeg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
+                <div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+                    <h3 class="text-3xl font-bold text-white">CREATION D’ENTREPRISE</h3>
+                    <p class="my-6 dark:text-gray-400">
+                        Saphir consulting vous assiste et vous guide dans la création de votre entreprise. Le créateur
+                        d’entreprise est accompagné et suivi tout au long des étapes de la création par un de nos
+                        experts-comptables qui maîtrise le secteur d’activité concerné.
+                    </p>
 
-
-    <!-- Details 3 -->
-    <div class="pt-16 pb-12">
-        <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
-            <div class="lg:col-span-5">
-                <div class="mb-16 lg:mb-0 xl:mt-16">
-                    <h2 class="mb-6">Platform integration and life time free updates</h2>
-                    <p class="mb-4">Get a glimpse of what this app can do for your marketing automation and understand why
-                        current users are so excited when using Pavo
-                        together with their teams.</p>
-                    <p class="mb-4">We will promptly answer any questions and honor your requests based on the service level
-                        agreement</p>
                 </div>
-            </div> <!-- end of col -->
-            <div class="lg:col-span-7">
-                <div class="ml-14">
-                    <img class="inline" src="images/details-3.jpg" alt="alternative" />
+            </div>
+            <div class="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
+                <img src="images/lg3.png" alt="" class="h-80 dark:bg-gray-500 aspect-video">
+                <div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+
+                    <h3 class="text-3xl font-bold text-white">Création des outils de comptabilité et de gestion</h3>
+                    <p class="my-6 dark:text-gray-400">
+                        Chaque secteur d’activité a des problèmes spécifiques auxquels on se doit de répondre en apportant
+                        des solutions appropriées. Tous les domaines de compétence sont sollicités au sein de notre cabinet
+                        pour satisfaire nos clients. Pour cela nous Créons des outils adaptés, pour répondre aux besoins des
+                        entreprises.
+                    </p>
+
                 </div>
-            </div> <!-- end of col -->
-        </div> <!-- end of container -->
-    </div>
-    <!-- end of details 3 -->
+            </div>
+        </div>
+    </section>
 
 
 
-    <!-- Testimonials -->
-    <div class="slider-1 py-32 bg-gray">
-        <div class="container px-4 sm:px-8">
-            <h2 class="mb-12 text-center lg:max-w-xl lg:mx-auto">What do users think about Pavo</h2>
 
-            <!-- Card Slider -->
-            <div class="slider-container">
-                <div class="swiper-container card-slider">
-                    <div class="swiper-wrapper">
-
-                        <!-- Slide -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img class="card-image" src="images/testimonial-1.jpg" alt="alternative" />
-                                <div class="card-body">
-                                    <p class="italic mb-3">It's been so fun to work with Pavo, I've managed to integrate it
-                                        properly into my business flow and it's great</p>
-                                    <p class="testimonial-author">Jude Thorn - Designer</p>
-                                </div>
-                            </div>
-                        </div> <!-- end of swiper-slide -->
-                        <!-- end of slide -->
-
-                        <!-- Slide -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img class="card-image" src="images/testimonial-2.jpg" alt="alternative" />
-                                <div class="card-body">
-                                    <p class="italic mb-3">We were so focused on launching as many campaigns as possible
-                                        that we've forgotten to target our loyal customers</p>
-                                    <p class="testimonial-author">Roy Smith - Developer</p>
-                                </div>
-                            </div>
-                        </div> <!-- end of swiper-slide -->
-                        <!-- end of slide -->
-
-                        <!-- Slide -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img class="card-image" src="images/testimonial-3.jpg" alt="alternative" />
-                                <div class="card-body">
-                                    <p class="italic mb-3">I've been searching for a tool like Pavo for so long. I love the
-                                        reports it generates and the amazing high accuracy</p>
-                                    <p class="testimonial-author">Marsha Singer - Marketer</p>
-                                </div>
-                            </div>
-                        </div> <!-- end of swiper-slide -->
-                        <!-- end of slide -->
-
-                        <!-- Slide -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img class="card-image" src="images/testimonial-4.jpg" alt="alternative" />
-                                <div class="card-body">
-                                    <p class="italic mb-3">We've been waiting for a powerful piece of software that can help
-                                        businesses manage their marketing projects</p>
-                                    <p class="testimonial-author">Tim Shaw - Designer</p>
-                                </div>
-                            </div>
-                        </div> <!-- end of swiper-slide -->
-                        <!-- end of slide -->
-
-                        <!-- Slide -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img class="card-image" src="images/testimonial-5.jpg" alt="alternative" />
-                                <div class="card-body">
-                                    <p class="italic mb-3">Searching for a great prototyping and layout design app was
-                                        difficult but thankfully I found app suite quickly</p>
-                                    <p class="testimonial-author">Lindsay Spice - Marketer</p>
-                                </div>
-                            </div>
-                        </div> <!-- end of swiper-slide -->
-                        <!-- end of slide -->
-
-                        <!-- Slide -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img class="card-image" src="images/testimonial-6.jpg" alt="alternative" />
-                                <div class="card-body">
-                                    <p class="italic mb-3">The app support team is amazing. They've helped me with some
-                                        issues and I am so grateful to the entire team</p>
-                                    <p class="testimonial-author">Ann Blake - Developer</p>
-                                </div>
-                            </div>
-                        </div> <!-- end of swiper-slide -->
-                        <!-- end of slide -->
-
-                    </div> <!-- end of swiper-wrapper -->
-
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <!-- end of add arrows -->
-
-                </div> <!-- end of swiper-container -->
-            </div> <!-- end of slider-container -->
-            <!-- end of card slider -->
-
-        </div> <!-- end of container -->
-    </div> <!-- end of slider-1 -->
-    <!-- end of testimonials -->
+    <section id="contact" class="py-10 dark:bg-gray-800 dark:text-gray-50">
+        <div class="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
+            <div class="py-6 md:py-0 md:px-6">
+                <h1 class="mb-6 text-4xl font-bold ">NOUS CONTACTEZ </h1>
+                <!-- <p class="pt-2 pb-4">Fill in the form to start a conversation</p> -->
+                <div class="space-y-4">
+                    <p class="flex items-center ">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="w-5 h-5 mr-2 sm:mr-6">
+                            <path fill-rule="evenodd"
+                                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span>15 Av. Roi Baudouin,Gombe,Kinshasa </span>
+                    </p>
+                    <p class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="w-5 h-5 mr-2 sm:mr-6">
+                            <path
+                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                            </path>
+                        </svg>
+                        <span>+243 823 383 983</span>
+                    </p>
+                    <p class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="w-5 h-5 mr-2 sm:mr-6">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                        </svg>
+                        <span>contact@business.com</span>
+                    </p>
+                </div>
+            </div>
+            <form class="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+                <label class="block">
+                    <span class="mb-1">Nom </span>
+                    <input type="text" placeholder="Leroy Jenkins"
+                        class="block w-full rounded-md shadow-sm focus:ring focus:ri dark:bg-gray-800">
+                </label>
+                <label class="block">
+                    <span class="mb-1">Prénom </span>
+                    <input type="text" placeholder="Leroy Jenkins"
+                        class="block w-full rounded-md shadow-sm focus:ring focus:ri dark:bg-gray-800">
+                </label>
+                <label class="block">
+                    <span class="mb-1">Numéro de téléphone </span>
+                    <input type="text" placeholder="Leroy Jenkins"
+                        class="block w-full rounded-md shadow-sm focus:ring focus:ri dark:bg-gray-800">
+                </label>
+                <label class="block">
+                    <span class="mb-1">Address Email</span>
+                    <input type="email" placeholder="leroy@jenkins.com"
+                        class="block w-full rounded-md shadow-sm focus:ring focus:ri dark:bg-gray-800">
+                </label>
+                <label class="block">
+                    <span class="mb-1">Message</span>
+                    <textarea rows="3" class="block w-full rounded-md focus:ring focus:ri dark:bg-gray-800"></textarea>
+                </label>
+                <button type="button"
+                    class="self-center px-8 py-3 text-lg text-gray-100 bg-indigo-400 focus:ring hover:ring focus:ri rounded-xl hover:ri">Envoyer</button>
+            </form>
+        </div>
+    </section>
 
 
 
 
 
 
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container px-4 sm:px-8">
-            <h4 class="mb-8 lg:max-w-3xl lg:mx-auto">Pavo is a mobile application for marketing automation and you can reach
-                the team at <a class="text-indigo-600 hover:text-gray-500"
-                    href="mailto:email@domain.com">email@domain.com</a></h4>
-            <div class="social-container">
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-facebook-f fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-twitter fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-pinterest-p fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-instagram fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-youtube fa-stack-1x"></i>
-                    </a>
-                </span>
-            </div> <!-- end of social-container -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->
-    <!-- end of footer -->
 
 
     <!-- Copyright -->
     <div class="copyright">
         <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-3">
             <ul class="mb-4 list-unstyled p-small">
-                <li class="mb-2"><a href="article.html">Article Details</a></li>
-                <li class="mb-2"><a href="terms.html">Terms & Conditions</a></li>
-                <li class="mb-2"><a href="privacy.html">Privacy Policy</a></li>
+                <!-- <li class="mb-2"><a href="article.html">Offres</a></li> -->
+                <!-- <li class="mb-2"><a href="terms.html">Terms & Conditions</a></li> -->
+                <!-- <li class="mb-2"><a href="privacy.html">Privacy Policy</a></li> -->
             </ul>
-            <p class="pb-2 p-small statement">Copyright © <a href="#your-link" class="no-underline">Your name</a></p>
+            <p class="pb-2 p-small statement">Copyright © <a href="#your-link" class="no-underline">2023</a></p>
 
-            <p class="pb-2 p-small statement">Distributed by :<a href="https://themewagon.com/"
-                    class="no-underline">Themewagon</a></p>
+            <!-- <p class="pb-2 p-small statement">Distributed by :<a href="https://themewagon.com/"
+                    class="no-underline">Themewagon</a></p> -->
         </div>
 
         <!-- end of container -->
-</div> <!-- end of copyright -->
+    </div> <!-- end of copyright -->
 <!-- end of copyright --></template>
