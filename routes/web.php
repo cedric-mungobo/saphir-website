@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OffresController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,11 @@ Route::get('/', function () {
 
     ]);
 });
+
+
+Route::resource('offres', OffresController::class);
+
+
 
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [
