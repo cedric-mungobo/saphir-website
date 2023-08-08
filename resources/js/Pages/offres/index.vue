@@ -18,7 +18,7 @@ defineProps(
         <!-- component -->
 <section class="from-cyan-100 via-blue-300 to-indigo-100 bg-gradient-to-br">
     <div class="container px-6 py-10 mx-auto">
-        <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Offres</h1>
+        <h1 class="pt-10 text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Offres</h1>
 
         <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
             <div class="bg-white bg-opacity-50 rounded-lg shadow-xl lg:flex " v-for="data in offres">

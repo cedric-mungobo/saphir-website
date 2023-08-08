@@ -183,9 +183,11 @@
 	function changeActive() {
 		const menuItems = getMenuItems();
 		$.each(menuItems, function(index, value){
-			var offsetSection = $('#' + value).offset().top;
-			var docScroll = $(document).scrollTop();
-			var docScroll1 = docScroll + 1;
+            if(value.length){
+                var offsetSection = $('#' + value).offset().top;
+                var docScroll = $(document).scrollTop();
+                var docScroll1 = docScroll + 1;
+            }
 
 			if ( docScroll1 >= offsetSection ){
 				$('.nav-link').removeClass('active');

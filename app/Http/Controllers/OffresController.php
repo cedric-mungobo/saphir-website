@@ -50,10 +50,10 @@ class OffresController extends Controller
 
         $data = Offres::find($id);
 
-        dd($data);
+
 
         return Inertia::render('offres/show', [
-
+            'offre' => $data
         ]);
     }
 

@@ -1,27 +1,135 @@
 <script setup>
 import NavBar from '@/Layouts/NavBar.vue';
+const props = defineProps({
+    offre: Object
+})
 
+console.log(props.offre.id)
 
 </script>
 
 <template>
-    <Head title="Welcome" />
-    <template>
-        <div class="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-800 dark:text-gray-100">
-            <div class="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
-                <img src="https://source.unsplash.com/random/480x360" alt="" class="w-full h-60 sm:h-96 dark:bg-gray-500">
-                <div class="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md dark:bg-gray-900">
-                    <div class="space-y-2">
-                        <a rel="noopener noreferrer" href="#" class="inline-block text-2xl font-semibold sm:text-3xl">The Best Activewear from the Nordstrom Anniversary Sale</a>
-                        <p class="text-xs dark:text-gray-400">By
-                            <a rel="noopener noreferrer" href="#" class="text-xs hover:underline">Leroy Jenkins</a>
-                        </p>
-                    </div>
-                    <div class="dark:text-gray-100">
-                        <p>Insert the actual text content here...</p>
+    <Head :title="props.title" />
+    <NavBar />
+    <!-- component -->
+    <div class="mt-6 bg-gray-50">
+        <div class="px-10 py-6 mx-auto ">
+
+            <!--author-->
+            <div class="max-w-6xl px-10 py-6 mx-auto bg-gray-50">
+
+                <a href="#_" class="block transition duration-200 ease-out transform hover:scale-110">
+                    <img class="object-cover w-full h-full shadow-sm rounded-xl"
+                        src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80">
+                </a>
+                <div class="pt-10 mt-6">
+                    <!--post heading-->
+                    <a href="#"
+                        class="font-bold text-purple-500 sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl hover:underline">
+                        {{ offre.title }}
+                    </a>
+
+                    <!--post views-->
+                    <!-- <div class="flex items-center justify-start mt-2">
+                        <p class="px-2 py-2 text-sm font-bold text-green-500 bg-gray-100 rounded-full hover:text-red-500">
+                            3000</p>
+                        <p class="ml-5 text-sm font-bold text-gray-400">Views</p>
+
+                    </div> -->
+
+                    <!--author avator-->
+                    <div class="font-light text-gray-600">
+
+                        <a href="#" class="flex items-center mt-6 mb-6">
+                            <!-- <img
+                                src="https://avatars.githubusercontent.com/u/71964085?v=4" alt="avatar"
+                                class="hidden object-cover mx-4 rounded-full w-14 h-14 sm:block"> -->
+                            <h1 class="font-bold text-gray-700 hover:underline">Publié le {{  offre.created_at }} Par Saphir Consulting Groupe</h1>
+                        </a>
                     </div>
                 </div>
+
+                <!--end post header-->
+                <!--post content-->
+                <div class="max-w-4xl px-10 mx-auto mt-4 text-2xl text-gray-700 bg-gray-100 rounded">
+
+                    <!--content body-->
+                    <div>
+                        <p class="p-8 mt-2">
+                         {{ offre.description }}
+                            </p>
+                    </div>
+
+
+
+                </div>
             </div>
-        </div>
-    </template>
+
+            <!--related posts-->
+            <h2 class="mt-4 text-2xl font-bold text-center text-gray-500">Related Posts</h2>
+            <div class="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
+
+
+                <div class="grid grid-cols-12 col-span-12 gap-7">
+                    <div
+                        class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl md:col-span-6 lg:col-span-4">
+                        <a href="#_" class="block transition duration-200 ease-out transform hover:scale-110">
+                            <img class="object-cover w-full h-full shadow-sm"
+                                src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80">
+                        </a>
+                        <div
+                            class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
+                            <div
+                                class="bg-indigo-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white inline-block">
+                                <span>Flask</span>
+                            </div>
+                            <h2 class="text-base font-bold text-gray-500 sm:text-lg md:text-xl"><a href="#_">Oauth using
+                                    facebook with flask,mysql,vuejs and tailwind css</a></h2>
+                            <!-- <p class="mt-2 text-sm text-gray-500">Learn how to authenticate users to your application using facebook.</p> -->
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl md:col-span-6 lg:col-span-4">
+                        <a href="#_" class="block transition duration-200 ease-out transform hover:scale-110">
+                            <img class="object-cover w-full h-full shadow-sm"
+                                src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80">
+                        </a>
+                        <div
+                            class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
+                            <div
+                                class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white inline-block">
+                                <span>Django</span>
+                            </div>
+                            <h2 class="text-base font-bold text-gray-500 sm:text-lg md:text-xl"><a href="#_">Authenticating
+                                    users with email verification in Django apps</a></h2>
+                            <!-- <p class="mt-2 text-sm text-gray-500">Learn how to authenticate users to your web application by sending secure links to their email box.</p> -->
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl md:col-span-6 lg:col-span-4">
+                        <a href="#_" class="block transition duration-200 ease-out transform hover:scale-110">
+                            <img class="object-cover w-full h-full shadow-sm"
+                                src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80">
+                        </a>
+                        <div
+                            class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
+                            <div
+                                class="bg-purple-500 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white inline-block">
+                                <span>Flask</span>
+                            </div>
+                            <h2 class="text-base font-bold text-gray-500 sm:text-lg md:text-xl"><a href="#_">Creating user
+                                    registration and authentication system in flask</a></h2>
+                            <!-- <p class="mt-2 text-sm text-gray-500">Learn how to authenticate users to your application using flask and mysql db.</p> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+    </div>
+</div>
 </template>

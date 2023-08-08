@@ -3,7 +3,7 @@ import { Head, Link } from '@inertiajs/vue3';
 
 </script>
 <template>
-    <nav class="relative flex flex-wrap items-center justify-between py-2 bg-[#f1f9fc]">
+    <nav class="navbar fixed-top flex flex-wrap items-center justify-between py-2 bg-[#f1f9fc]">
         <div class="container flex flex-wrap items-center justify-between px-4 mx-auto">
             <div class="relative flex justify-between w-full px-4 lg:w-auto lg:static lg:block lg:justify-start">
                 <!-- Image Logo -->
@@ -18,7 +18,7 @@ import { Head, Link } from '@inertiajs/vue3';
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
-            <div v-bind:class="{ 'hidden': !showMenu, 'flex': showMenu }" class="items-center lg:flex lg:flex-grow">
+            <div v-bind:class="{ 'hidden': !showMenu, 'flex': showMenu }" class="items-center lg:flex lg:flex-grow navbar-collapse offcanvas-collapse">
                 <ul class="flex flex-col pl-0 mt-3 mb-2 ml-auto list-none lg:mt-0 lg:mb-0 lg:flex-row">
                     <li>
                         <a class="nav-link page-scroll " href="#header">Acceuil <span
