@@ -20,7 +20,8 @@
 		$(document).on('click', 'a.page-scroll', function(event) {
 			var $anchor = $(this);
 			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top
+				scrollTop: $($anchor.attr('href')).position().top
+				// scrollTop: $($anchor.attr('href')).offset().top
 			}, 600, 'easeInOutExpo');
 			event.preventDefault();
 		});
@@ -29,26 +30,13 @@
     // close menu on click in small viewport
     $('[data-toggle="offcanvas"], .nav-link:not(.dropdown-toggle').on('click', function () {
 
-        alert('test')
+
         $('.offcanvas-collapse').toggleClass('open')
 
 
     })
 
-    // hover in desktop mode
-    function toggleDropdown (e) {
-        const _d = $(e.target).closest('.dropdown'),
-            _m = $('.dropdown-menu', _d);
-        setTimeout(function(){
-            const shouldOpen = e.type !== 'click' && _d.is(':hover');
-            _m.toggleClass('show', shouldOpen);
-            _d.toggleClass('show', shouldOpen);
-            $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
-        }, e.type === 'mouseleave' ? 300 : 0);
-    }
-    $('body')
-    .on('mouseenter mouseleave','.dropdown',toggleDropdown)
-    .on('click', '.dropdown-menu a', toggleDropdown);
+
 
 
     /* Details Lightbox - Magnific Popup */

@@ -50,7 +50,7 @@ import NavBar from '@/Layouts/NavBar.vue';
             <!-- Card -->
             <div class="card">
                 <div class="card-image">
-                    <img src="images/features-icon-3.svg" alt="alternative" />
+                    <img src="images/service/1.jpg" alt="alternative" />
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Ingénierie financière</h5>
@@ -70,13 +70,7 @@ import NavBar from '@/Layouts/NavBar.vue';
             <!-- Card -->
             <div class="card">
                 <div class="card-image">
-                    <!-- <img src="images/features-icon-2.svg" alt="alternative" /> -->
-                    <svg style="color: red" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M3 5C3 3.89543 3.89543 3 5 3H15C16.1046 3 17 3.89543 17 5V13C17 14.1046 16.1046 15 15 15H12.7808L12.903 15.4887L13.7071 16.2929C13.9931 16.5789 14.0787 17.009 13.9239 17.3827C13.7691 17.7563 13.4045 18 13 18H7.00003C6.59557 18 6.23093 17.7563 6.07615 17.3827C5.92137 17.009 6.00692 16.5789 6.29292 16.2929L7.09706 15.4887L7.21925 15H5C3.89543 15 3 14.1046 3 13V5ZM8.7713 12C8.75657 11.9997 8.74189 11.9997 8.72725 12H5V5H15V12H11.2728C11.2582 11.9997 11.2435 11.9997 11.2288 12H8.7713Z"
-                            fill="red"></path>
-                    </svg>
+                    <img src="images/service/2.jpg" alt="alternative" />
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Développement informatique</h5>
@@ -95,7 +89,7 @@ import NavBar from '@/Layouts/NavBar.vue';
             <!-- Card -->
             <div class="mx-5 card">
                 <div class="card-image">
-                    <img src="images/features-icon-5.svg" alt="alternative" />
+                    <img src="images/service/3.jpg" alt="alternative" />
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Multiservice client</h5>
@@ -116,7 +110,7 @@ import NavBar from '@/Layouts/NavBar.vue';
             <!-- Card -->
             <div class="card">
                 <div class="card-image">
-                    <img src="images/features-icon-4.svg" alt="alternative" />
+                    <img src="images/service/4.jpg" alt="alternative" />
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Placement et gestion des ressources humaines</h5>

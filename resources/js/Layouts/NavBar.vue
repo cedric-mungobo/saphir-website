@@ -18,7 +18,7 @@ import { Head, Link } from '@inertiajs/vue3';
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
-            <div v-bind:class="{ 'hidden': !showMenu, 'flex': showMenu }" class="items-center lg:flex lg:flex-grow navbar-collapse offcanvas-collapse">
+            <div v-bind:class="{ 'hidden': !showMenu, 'flex': showMenu }" class="items-center lg:flex lg:flex-grow ">
                 <ul class="flex flex-col pl-0 mt-3 mb-2 ml-auto list-none lg:mt-0 lg:mb-0 lg:flex-row">
                     <li>
                         <a class="nav-link page-scroll " href="#header">Acceuil <span

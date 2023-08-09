@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Inertia\Inertia;
+use Inertia\Response;
 use App\Models\Offres;
 use Illuminate\Http\Request;
-use Inertia\Response;
+use Illuminate\Support\Facades\DB;
 
 class OffresController extends Controller
 {
@@ -50,10 +51,16 @@ class OffresController extends Controller
 
         $data = Offres::find($id);
 
+        // $offres = Offres::latest()->take(3)->get();
+        $offres = Offres::get()->random(3);
+
+
+// dd($offres);
 
 
         return Inertia::render('offres/show', [
-            'offre' => $data
+            'offre' => $data,
+            'offres' => $offres
         ]);
     }
 
