@@ -1,8 +1,29 @@
 <script setup>
-
+import { Head, Link,router,useForm } from '@inertiajs/vue3';
 import NavBar from '@/Layouts/NavBar.vue';
+import { reactive } from 'vue'
+import InputError from '@/Components/InputError.vue';
+// import { router } from '@inertiajs/vue3'
 
 
+
+const form = useForm({
+  first_name: null,
+  last_name: null,
+  email: null,
+  phone: null,
+  message: null,
+})
+
+const submit = () => {
+
+    console.log(form)
+    // alert('sumited')
+
+    form.post(route('contact'), {
+        onFinish: () => form.reset(),
+    });
+}
 
 </script>
 
@@ -294,36 +315,48 @@ import NavBar from '@/Layouts/NavBar.vue';
                             <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                         </svg>
-                        <span>contact@business.com</span>
+                        <span>contact@saphirconsultinggroupe.com </span>
                     </p>
                 </div>
             </div>
-            <form class="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+            <form class="flex flex-col py-6 space-y-6 md:py-0 md:px-6" @submit.prevent="submit" >
                 <label class="block">
                     <span class="mb-1">Nom </span>
-                    <input type="text" placeholder="Leroy Jenkins"
+                    <input type="text" v-model="form.first_name" placeholder="Leroy Jenkins"
                         class="block w-full rounded-md shadow-sm focus:ring focus:ri dark:bg-gray-800">
+
+                        <InputError class="mt-2" :message="form.errors.first_name" />
                 </label>
                 <label class="block">
                     <span class="mb-1">Prénom </span>
-                    <input type="text" placeholder="Leroy Jenkins"
+                    <input type="text" v-model="form.last_name" placeholder="Leroy Jenkins"
                         class="block w-full rounded-md shadow-sm focus:ring focus:ri dark:bg-gray-800">
-                </label>
+                        <InputError class="mt-2" :message="form.errors.last_name" />
+
+                    </label>
                 <label class="block">
                     <span class="mb-1">Numéro de téléphone </span>
-                    <input type="text" placeholder="Leroy Jenkins"
+                    <input type="text" v-model="form.phone" placeholder="Leroy Jenkins"
                         class="block w-full rounded-md shadow-sm focus:ring focus:ri dark:bg-gray-800">
-                </label>
+                        <InputError class="mt-2" :message="form.errors.phone" />
+
+                    </label>
                 <label class="block">
                     <span class="mb-1">Address Email</span>
-                    <input type="email" placeholder="leroy@jenkins.com"
+                    <input type="email" v-model="form.email" placeholder="leroy@jenkins.com"
                         class="block w-full rounded-md shadow-sm focus:ring focus:ri dark:bg-gray-800">
-                </label>
+                        <InputError class="mt-2" :message="form.errors.email" />
+
+                    </label>
                 <label class="block">
                     <span class="mb-1">Message</span>
-                    <textarea rows="3" class="block w-full rounded-md focus:ring focus:ri dark:bg-gray-800"></textarea>
+                    <textarea rows="3" v-model="form.message" class="block w-full rounded-md focus:ring focus:ri dark:bg-gray-800"></textarea>
+                    <InputError class="mt-2" :message="form.errors.message" />
+
                 </label>
-                <button type="button"
+
+
+                <button type="submit"  :class="{ 'opacity-25': form.processing }" :disabled="form.processing"
                     class="self-center px-8 py-3 text-lg text-gray-100 bg-indigo-400 focus:ring hover:ring focus:ri rounded-xl hover:ri">Envoyer</button>
             </form>
         </div>

@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\OffresController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Offres;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -26,6 +28,8 @@ Route::get('/', function () {
 
 Route::resource('offres', OffresController::class);
 
+Route::post('contact', ContactController::class)->name('contact');
+
 
 
 // Route::get('/', function () {
@@ -37,10 +41,17 @@ Route::resource('offres', OffresController::class);
 //     ]);
 // });
 
+
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+
+    $data = Offres::latest()->get();
+
+    return Inertia::render('Dashboard',[
+        'offres' => $data
+    ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::post('contact',ContactController::class)->name('contact');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
